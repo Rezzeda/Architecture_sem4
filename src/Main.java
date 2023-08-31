@@ -27,7 +27,7 @@ public class Main {
         LocalDateTime searchDate = LocalDateTime.of(2023, 9, 1, 0, 0);
         long searchRootNumber = 1;
         List<Ticket> foundTickets = customer.search(searchDate, searchRootNumber);
-        if (foundTickets.isEmpty()) {
+        if (foundTickets == null || foundTickets.isEmpty()) {
             System.out.println("Билеты не найдены.");
         } else {
             System.out.println("Найдены следующие билеты:");
